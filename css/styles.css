@@ -1,14 +1,15 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque ;
+    background-color: bisque;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 div{
     background-size: cover;
     height: 400px;
-    margin: 40px 0 0 0;
+    margin: 40px 0;
     border-radius: 12px;
     position: relative;
 }
@@ -19,33 +20,27 @@ h1{
     margin: 60px 0 0 0;
 }
 
-h2{
+h2, h3{
     text-align: center;
-    margin: 0 20 70px 0;
+    margin: 20px 20px 70px 20px;
 }
-
-h3{
-    text-align: center;
-    margin: 0 20 70px 0;
-}
-
 
 p{
-    color:white ;
-    background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.4));
-    background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.4));
-    background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.4));
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.4));
     padding: 10px;
     line-height: 28px;
     border-radius: 12px;
     text-align: justify;
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     margin: 0;
     height: 30px;
-    transition: height .5s;
-    -webkit-transition: height .5s;
-    -moz-transition: heigth .5s;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
 }
 
 small{
@@ -63,9 +58,11 @@ small{
 .borsch {
     background-image: url(../images/800_0_1588081977-7108.webp);
 }
+
 .paste {
     background-image: url(../images/krem-pashtet-iz-kurinij-pecheni_siteWeb.jpg);
 }
+
 .tongue {
     background-image: url(../images/varenii_svinoi_yazik_ochen_prostoi_recept-409392.jpg);
 }
@@ -78,24 +75,64 @@ small{
     float: right; 
 }
 
-@media (max-width:500px){
-    .div{
-        margin: 20px 12px 0 12px;
+@media (max-width: 500px){
+    body {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 10px;
     }
-    h1{
-        font-size: 50px;
-        line-height: 30px;
-        margin-top: 65px;
+
+    div {
+        margin: 20px 0;
+        height: 400px;
+        background-size: cover;
     }
-    h2{
-        font-size: larger;
-        margin: 30px 0 30px 0;
+
+    h1 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-top: 30px;
     }
-    
-    small{
-        font-size: 16px;
+
+    h2, h3 {
+        font-size: 24px;
+        margin: 40px 20px 20px 20px;
     }
-    .price{
-        margin-right: 389px;
+
+    p {
+        height: 30px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    .price {
+        margin-right: 0;
+        text-align: right;
+    }
+
+    .price-text {
+        float: none; 
+    }
+}
+
+@media (min-width: 500px) and (max-width: 648px){
+    .price {
+        margin-right: 0;
+        text-align: right;
+    }
+
+    .price-text {
+        float: none;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 866px){
+    h2, h3 {
+        margin-top: 60px;
     }
 }
