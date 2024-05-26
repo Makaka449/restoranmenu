@@ -75,5 +75,27 @@ small{
 }
 
 .price-text{
-    float: right;
+    float: right; 
+}
+
+@media (max-width:500px){
+    .div{
+        margin: 20px 12px 0 12px;
+    }
+    h1{
+        font-size: 50px;
+        line-height: 30px;
+        margin-top: 65px;
+    }
+    h2{
+        font-size: larger;
+        margin: 30px 0 30px 0;
+    }
+    
+    small{
+        font-size: 16px;
+    }
+    .price{
+        margin-right: 389px;
+    }
 }
